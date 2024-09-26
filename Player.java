@@ -14,19 +14,19 @@ public class Player {
     }
 
     public void addPoints(int points) {
-        score += points;
+        score += points; // Add points to the player's total score
+        System.out.println("Player scored " + points + " points! Total: " + score);
     }
 
     public void drawShape(int shapeSize) {
         System.out.println("Drawing shape of size: " + shapeSize);
-        facadeSheet.addShape(shapeSize);
+        facadeSheet.addShape(shapeSize); // Add the shape to the grid
     }
 
     public void checkCompletedRowsAndColumns() {
-        int points = facadeSheet.checkForCompletedRowsOrColumns();
+        int points = facadeSheet.checkForCompletedRowsOrColumns(); // Check if any rows or columns are completed
         if (points > 0) {
-            addPoints(points);
-            System.out.println("You earned " + points + " points!");
+            addPoints(points); // Add points to the player's score
         }
     }
 }

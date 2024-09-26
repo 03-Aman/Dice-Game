@@ -41,10 +41,11 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         int shapeSize = scanner.nextInt();
 
-        player.drawShape(shapeSize);
-        player.checkCompletedRowsAndColumns();
+        player.drawShape(shapeSize); // Player draws the shape
+        player.checkCompletedRowsAndColumns(); // Check if rows/columns are completed and update score
+
         if (player.getScore() >= 12) {
-            gameOver = true;
+            gameOver = true; // End game if any player reaches or exceeds 12 points
         }
     }
 
